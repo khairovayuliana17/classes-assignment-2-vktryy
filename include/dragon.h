@@ -3,6 +3,9 @@
 class Dragon {
   public:
     // YOUR CODE HERE
+    enum class Type { FIRE, ICE, FOREST, GOLDEN };
+
+    enum class AgeCategory { BABY, YOUNG, ADULT, ANCIENT };
 
     Dragon();
     void registerDragon(const std::string& name, int tail_length, int age, int magic, Type type);
@@ -27,4 +30,10 @@ class Dragon {
 
   private:
     // YOUR CODE HERE
+    std::string name = "";
+    int tail_length = 1;
+    int age = 0;
+    int magic_power = 0;
+    bool is_registered = false;
+    Type type = Type::FIRE;
 };
